@@ -23,6 +23,7 @@ public class HomeController {
         return "login";
     }
 
+//    Model for passing using information to another page
     @RequestMapping("/secure")
     public String secure(Principal principal, Model model) {
         String username = principal.getName();
