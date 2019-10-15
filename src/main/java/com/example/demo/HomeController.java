@@ -30,4 +30,11 @@ public class HomeController {
         model.addAttribute("user", userRepository.findByUsername(username));
         return "secure";
     }
+
+    @RequestMapping("/testpage")
+    public String testPage(Principal principal, Model model) {
+        String username = principal.getName();
+        model.addAttribute("user", userRepository.findByUsername(username));
+        return "test";
+    }
 }
